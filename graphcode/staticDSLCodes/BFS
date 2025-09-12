@@ -1,0 +1,20 @@
+function bfs(Graph g, node start_node)
+{
+    propNode<bool> visited;
+    g.attachNodeProperty(visited = False);
+
+    start_node.visited = True;
+    std::vector<node> queue;
+    queue.push_back(start_node);
+
+    while (queue.size() == 0)
+    {
+        node top = queue[0];
+        queue.erase(queue.begin());
+        forall(nbr in g.nodes_from(top).filter(visited == False))
+        {
+            visited[nbr] = True;
+            queue.push_back(nbr);
+        }
+    }
+}

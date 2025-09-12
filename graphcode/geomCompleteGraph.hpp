@@ -27,7 +27,7 @@ public:
     std::vector<std::vector<int>> coordinates;
     std::vector<int> demand;
 
-    graph copyGraph()
+    AbstractGraph& copyGraph()
     {
         // TODO implemente this method
         geomCompleteGraph g_copy(filePath);
@@ -403,7 +403,7 @@ public:
         return;
     }
 
-    graph getMST() {
+    AbstractGraph& getMST() {
     int V = nodesTotal + 1;
     std::vector<bool> inMST(V, false);
     std::vector<int> key(V, INT_MAX);

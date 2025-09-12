@@ -7,6 +7,9 @@
 #include <algorithm>
 #include <cstring>
 #include <climits>
+// #include "../graph.hpp"
+#include "../generated_omp/triangle_counting_dsl.cc"
+
 // #include "./generated_omp/v_cover.cc"
 int main(int argc, char*argv[]) {
     char* filePath;

@@ -76,7 +76,7 @@ public:
     rev_edgeLen = NULL;
   }
 
-  graph copyGraph(){
+  AbstractGraph& copyGraph(){
     graph g_copy((char*)"");
     g_copy.nodesTotal = nodesTotal;
     g_copy.edgesTotal = edgesTotal;
@@ -1087,7 +1087,7 @@ public:
     parseEdgesContent();  
   }
 
-  graph getMST() {
+  AbstractGraph& getMST() {
     int V = nodesTotal + 1;
     std::vector<bool> inMST(V, false);
     std::vector<int> key(V, INT_MAX);

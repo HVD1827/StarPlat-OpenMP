@@ -1,0 +1,10 @@
+1. goto src, make clean and then make
+2. ./Starplat -s/d -f file_path(abs preferred) -b omp
+3. write main file and then experiment with it
+
+source /opt/intel/oneapi/setvars.sh
+
+g++ main.cpp -fopenmp \
+-I/opt/intel/oneapi/mkl/latest/include \
+-L/opt/intel/oneapi/mkl/latest/lib/intel64 \
+-lmkl_rt -o triangle_count

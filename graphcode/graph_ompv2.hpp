@@ -1,6 +1,7 @@
 #ifndef STARPLAT_GRAPH_OMPV2_HPP
 #define STARPLAT_GRAPH_OMPV2_HPP
 
+#include "graph.hpp"
 #include "update.hpp"
 #include <climits>
 #include "omp.h"

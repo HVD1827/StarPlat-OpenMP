@@ -10,6 +10,7 @@
 #include <algorithm>
 #include <string.h>
 #include <climits>
+
 #include "update.hpp"
 #include "graph_ompv2.hpp"
 
@@ -27,7 +28,7 @@ public:
 class AbstractGraph
 {
 public:
-    virtual graph copyGraph() = 0;
+    virtual AbstractGraph &copyGraph() = 0;
     virtual std::map<int, std::vector<edge>> getEdges() = 0;
     virtual int *getEdgeLen() = 0;
     virtual int num_nodes() = 0;
@@ -54,7 +55,7 @@ public:
     virtual void updateCSRAdd(std::vector<update> &batchUpdate, int k, int size) = 0;
     virtual std::vector<edge> getNeighbors(int node) = 0;
     virtual std::vector<edge> getInNeighbors(int node) = 0;
-    virtual graph getMST() = 0;
+    virtual AbstractGraph &getMST() = 0;
     virtual void printGraph() = 0;
 };
 
